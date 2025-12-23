@@ -4,122 +4,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAT Math Hub | Master the SAT</title>
-
-    <!-- LINK TO EXTERNAL CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-    <nav>
-        <a href="#" class="logo" onclick="router('home')">SAT Math Hub</a>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <ul class="nav-links" id="navLinks">
-            <li><a onclick="router('home')">Home</a></li>
-            <li><a onclick="router('formulas')">Formulas</a></li>
-            <li><a onclick="router('videos')">Videos</a></li>
-            <li><a onclick="router('desmos')">Desmos</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <a href="#" class="logo" onclick="router('home')">SAT Math Hub</a>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a onclick="router('home')">Home</a></li>
+                <li><a onclick="router('formulas')">Formulas</a></li>
+                <li><a onclick="router('videos')">Videos</a></li>
+                <li><a onclick="router('desmos')">Desmos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main class="container">
-
-    <!-- HOME -->
-    <section id="home" class="page-section active">
-        <div class="hero">
-            <h1>Master the SAT Math Section</h1>
-            <p>Free formulas and Desmos strategies to boost your score.</p>
-            <button class="cta-button" onclick="router('formulas')">Start Studying</button>
-        </div>
-
-        <div class="features-grid">
-            <div class="feature-card">
-                <span class="feature-icon">📐</span>
-                <h3>Essential Formulas</h3>
-                <p>Access every formula you need to memorize.</p>
+    <main class="container">
+        <!-- HOME PAGE -->
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <h1>Master the SAT Math Section</h1>
+                <p>Free formulas and Desmos strategies to boost your score.</p>
+                <button onclick="router('formulas')" class="cta-button">Start Studying</button>
             </div>
-            <div class="feature-card">
-                <span class="feature-icon">📈</span>
-                <h3>Desmos Mastery</h3>
-                <p>Learn how to use Desmos strategically on test day.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">🎥</span>
-                <h3>Video Lessons</h3>
-                <p>Walkthroughs and full practice test solutions.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- FORMULAS -->
-    <section id="formulas" class="page-section">
-        <h1>Comprehensive Formula Library</h1>
-
-        <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-                Quadratics <span>▼</span>
-            </div>
-            <div class="accordion-content">
-                <div class="formula-box">x = (-b ± √(b² − 4ac)) / 2a</div>
-                <div class="formula-box">x₁ + x₂ = −b/a</div>
-                <div class="formula-box">x₁x₂ = c/a</div>
-                <div class="formula-box">Δ = b² − 4ac</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- VIDEOS -->
-    <section id="videos" class="page-section">
-        <h1>Video Tutorials</h1>
-
-        <div class="video-grid">
-            <div class="video-card">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube-nocookie.com/embed/6lIB1EV5RgQ" allowfullscreen></iframe>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">📐</span>
+                    <h3>Essential Formulas</h3>
+                    <p>Access a clean, organized list of every formula you need to memorize.</p>
                 </div>
-                <div class="video-info">
-                    <h3>SAT Math Walkthrough</h3>
-                    <p>Full strategy breakdown.</p>
+                <div class="feature-card">
+                    <span class="feature-icon">📈</span>
+                    <h3>Desmos Mastery</h3>
+                    <p>Learn how to use the built-in calculator to hack difficult algebra problems.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🎥</span>
+                    <h3>Video Lessons</h3>
+                    <p>Watch detailed walkthroughs of SAT practice tests and Desmos tips.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- DESMOS -->
-    <section id="desmos" class="page-section">
-        <h1>Interactive Desmos</h1>
-        <div class="desmos-container">
-            <iframe src="https://www.desmos.com/calculator"></iframe>
-        </div>
-    </section>
+        <!-- FORMULAS PAGE -->
+        <section id="formulas" class="page-section">
+            <h1>Comprehensive Formula Library</h1>
+            <p>Focus on these core concepts commonly tested on the SAT Math sections.</p>
 
-</main>
+            <h2>Algebra & Quadratics</h2>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    Heart of Algebra <span>▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="formula-box"><strong>Slope Formula:</strong> m = (y₂ - y₁) / (x₂ - x₁)</div>
+                    <div class="formula-box"><strong>Slope-Intercept Form:</strong> y = mx + b</div>
+                    <div class="formula-box"><strong>Point-Slope Form:</strong> y - y₁ = m(x - x₁)</div>
+                    <div class="formula-box"><strong>Standard Form:</strong> Ax + By = C</div>
+                </div>
+            </div>
 
-<footer>
-    <p>SAT Math Hub. Built to help students succeed.</p>
-</footer>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    Passport to Advanced Math <span>▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="formula-box"><strong>Quadratic Formula:</strong> x = (-b ± √(b² - 4ac)) / 2a</div>
+                    <div class="formula-box"><strong>Sum of Solutions (Vieta's):</strong> x₁ + x₂ = -b / a</div>
+                    <div class="formula-box"><strong>Product of Solutions (Vieta's):</strong> x₁x₂ = c / a</div>
+                    <div class="formula-box"><strong>Vertex of Parabola:</strong> x = -b / 2a</div>
+                    <div class="formula-box"><strong>Discriminant (Δ):</strong> b² − 4ac</div>
+                    <div class="formula-box"><strong>Exponential Growth:</strong> y = a(1 + r)^t</div>
+                </div>
+            </div>
 
-<!-- JS -->
-<script>
-function router(pageId) {
-    document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
-    document.getElementById(pageId).classList.add('active');
-    document.getElementById('navLinks').classList.remove('active');
-    window.scrollTo(0, 0);
-}
+            <h2>Geometry & Trigonometry</h2>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    Circles & Arc Length <span>▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="formula-box"><strong>Circle Equation:</strong> (x - h)² + (y - k)² = r²</div>
+                    <div class="formula-box"><strong>Area of Circle:</strong> A = πr²</div>
+                    <div class="formula-box"><strong>Circumference:</strong> C = 2πr</div>
+                    <div class="formula-box"><strong>Arc Length (Degrees):</strong> s = (θ/360) × 2πr</div>
+                    <div class="formula-box"><strong>Arc Length (Radians):</strong> s = rθ</div>
+                    <div class="formula-box"><strong>Area of Sector (Degrees):</strong> A = (θ/360) × πr²</div>
+                    <div class="formula-box"><strong>Area of Sector (Radians):</strong> A = ½r²θ</div>
+                </div>
+            </div>
 
-function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('active');
-}
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    Triangles & Trig <span>▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="formula-box"><strong>Pythagorean Theorem:</strong> a² + b² = c²</div>
+                    <div class="formula-box"><strong>SOH CAH TOA:</strong> Sin = Opp/Hyp, Cos = Adj/Hyp, Tan = Opp/Adj</div>
+                    <div class="formula-box"><strong>Radians to Degrees:</strong> multiply by 180/π</div>
+                    <div class="formula-box"><strong>Degrees to Radians:</strong> multiply by π/180</div>
+                </div>
+            </div>
+        </section>
 
-function toggleAccordion(header) {
-    const content = header.nextElementSibling;
-    content.classList.toggle('open');
-    header.querySelector('span').textContent =
-        content.classList.contains('open') ? '▲' : '▼';
-}
-</script>
+        <!-- VIDEOS PAGE -->
+        <section id="videos" class="page-section">
+            <h1>Video Tutorials</h1>
+            <p>Master the digital SAT with these visual guides.</p>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube-nocookie.com/embed/6lIB1EV5RgQ" title="My SAT Math Walkthrough" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>My SAT Math Walkthrough</h3>
+                        <p>Essential strategies and tips for scoring high on the math section.</p>
+                    </div>
+                </div>
 
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube-nocookie.com/embed/e-O4nwVHQ-Y" title="James Lu Desmos Guide" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>James Lu: The Ultimate Desmos Guide</h3>
+                        <p>Unlock the power of the digital SAT calculator to solve algebra instantly.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <div class="coming-soon-placeholder">
+                            <h3>Practice Test #4</h3>
+                            <span>Coming Out Tomorrow</span>
+                        </div>
+                    </div>
+                    <div class="video-info"><h3>Practice Test #4: Walkthrough</h3><p>Full walkthrough coming soon.</p></div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <div class="coming-soon-placeholder">
+                            <h3>Practice Test #9</h3>
+                            <span>Coming in 2 Days</span>
+                        </div>
+                    </div>
+                    <div class="video-info"><h3>Practice Test #9: Walkthrough</h3><p>Full walkthrough coming soon.</p></div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <div class="coming-soon-placeholder">
+                            <h3>Practice Test #10</h3>
+                            <span>Coming in 3 Days</span>
+                        </div>
+                    </div>
+                    <div class="video-info"><h3>Practice Test #10: Walkthrough</h3><p>Full walkthrough coming soon.</p></div>
+                </div>
+            </div>
+
+            <div class="resources-section">
+                <h2>Additional Recommended Resources</h2>
+                <p>I used these exact resources to improve my own score. They are highly recommended!</p>
+                <div class="resource-list">
+                    <div class="resource-item">
+                        <a href="https://www.tutoredbydesign.com/" target="_blank">TutoredByDesign</a>
+                        <p>High-quality videos and great free resources. Their website is easy to navigate and very helpful.</p>
+                    </div>
+                    <div class="resource-item">
+                        <a href="https://www.youtube.com/@JamesLuSAT" target="_blank">James Lu (YouTube)</a>
+                        <p>Essential for math, but his English strategies are a absolute must-learn for any student.</p>
+                    </div>
+                    <div class="resource-item">
+                        <a href="https://www.tiktok.com/@satpreptutor" target="_blank">SATPrepTutor (TikTok)</a>
+                        <p>Daniel is a great tutor with excellent math videos. He covers all-around math fundamentals perfectly.</p>
+                    </div>
+                    <div class="resource-item">
+                        <a href="https://www.khanacademy.org/test-prep/digital-sat" target="_blank">Khan Academy SAT</a>
+                        <p>The official practice partner of the College Board. Best for foundations and drilling specific skills.</p>
+                    </div>
+                </div>
+
+                <div class="book-request">
+                    <h4>Need an SAT Math PDF?</h4>
+                    <p>I can get you any SAT math book you need in PDF form. Just reach out!</p>
+                    <p><strong>Email:</strong> <a href="mailto:juanmartinezberrios2026@gmail.com">juanmartinezberrios2026@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESMOS PAGE -->
+        <section id="desmos" class="page-section">
+            <h1>Interactive Desmos Practice</h1>
+            <p>Practice using the graphing calculator exactly like you would during the actual SAT.</p>
+            <div class="desmos-container">
+                <iframe src="https://www.desmos.com/calculator" title="Desmos Graphing Calculator"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>SAT Math Hub. Built to help students succeed.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
