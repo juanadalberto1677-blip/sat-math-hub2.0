@@ -50,6 +50,7 @@ nav {
     font-weight: 800;
     color: var(--primary-blue);
     text-decoration: none;
+    cursor: pointer;
 }
 
 .nav-links {
@@ -81,6 +82,7 @@ nav {
     margin: 0 auto;
     padding: 2rem 1rem;
     flex: 1;
+    width: 100%;
 }
 
 .page-section {
