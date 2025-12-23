@@ -4,220 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAT Math Hub | Master the SAT</title>
+
+    <!-- LINK TO EXTERNAL CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header / Navigation -->
-    <header>
-        <nav>
-            <a href="#" class="logo" onclick="router('home')">SAT Math Hub</a>
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#" onclick="router('home')">Home</a></li>
-                <li><a href="#" onclick="router('formulas')">Formulas</a></li>
-                <li><a href="#" onclick="router('videos')">Videos</a></li>
-                <li><a href="#" onclick="router('desmos')">Desmos</a></li>
-                <li><a href="#" onclick="router('practice')">Practice</a></li>
-                <li><a href="#" onclick="router('contact')">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <a href="#" class="logo" onclick="router('home')">SAT Math Hub</a>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a onclick="router('home')">Home</a></li>
+            <li><a onclick="router('formulas')">Formulas</a></li>
+            <li><a onclick="router('videos')">Videos</a></li>
+            <li><a onclick="router('desmos')">Desmos</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main class="container">
+<main class="container">
 
-        <!-- HOME PAGE -->
-        <section id="home" class="page-section active">
-            <div class="hero">
-                <h1>Master the SAT Math Section</h1>
-                <p>Free formulas, practice questions, and Desmos strategies to boost your score.</p>
-                <a href="#" onclick="router('formulas')" class="cta-button">Start Studying</a>
+    <!-- HOME -->
+    <section id="home" class="page-section active">
+        <div class="hero">
+            <h1>Master the SAT Math Section</h1>
+            <p>Free formulas and Desmos strategies to boost your score.</p>
+            <button class="cta-button" onclick="router('formulas')">Start Studying</button>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">📐</span>
+                <h3>Essential Formulas</h3>
+                <p>Access every formula you need to memorize.</p>
             </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <span class="feature-icon">📐</span>
-                    <h3>Essential Formulas</h3>
-                    <p>Access a clean, organized list of every formula you need to memorize.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">📈</span>
-                    <h3>Desmos Mastery</h3>
-                    <p>Learn how to use the embedded calculator to hack difficult algebra problems.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">✏️</span>
-                    <h3>Practice Problems</h3>
-                    <p>Test your skills with realistic questions and step-by-step solutions.</p>
-                </div>
+            <div class="feature-card">
+                <span class="feature-icon">📈</span>
+                <h3>Desmos Mastery</h3>
+                <p>Learn how to use Desmos strategically on test day.</p>
             </div>
-        </section>
-
-        <!-- FORMULAS PAGE -->
-        <section id="formulas" class="page-section">
-            <h1>SAT Math Formulas</h1>
-            <p>Click on a category to reveal the formulas.</p>
-
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    Heart of Algebra <span>▼</span>
-                </div>
-                <div class="accordion-content">
-                    <div class="formula-box"><strong>Slope Formula:</strong> m = (y₂ - y₁) / (x₂ - x₁)</div>
-                    <div class="formula-box"><strong>Slope-Intercept Form:</strong> y = mx + b</div>
-                    <div class="formula-box"><strong>Point-Slope Form:</strong> y - y₁ = m(x - x₁)</div>
-                    <div class="formula-box"><strong>Standard Form:</strong> Ax + By = C</div>
-                </div>
+            <div class="feature-card">
+                <span class="feature-icon">🎥</span>
+                <h3>Video Lessons</h3>
+                <p>Walkthroughs and full practice test solutions.</p>
             </div>
+        </div>
+    </section>
 
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    Geometry & Trigonometry <span>▼</span>
-                </div>
-                <div class="accordion-content">
-                    <div class="formula-box"><strong>Area of Circle:</strong> A = πr²</div>
-                    <div class="formula-box"><strong>Circumference:</strong> C = 2πr</div>
-                    <div class="formula-box"><strong>Pythagorean Theorem:</strong> a² + b² = c²</div>
-                    <div class="formula-box"><strong>SOH CAH TOA:</strong> Sin = Opp/Hyp, Cos = Adj/Hyp, Tan = Opp/Adj</div>
-                </div>
+    <!-- FORMULAS -->
+    <section id="formulas" class="page-section">
+        <h1>Comprehensive Formula Library</h1>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                Quadratics <span>▼</span>
             </div>
+            <div class="accordion-content">
+                <div class="formula-box">x = (-b ± √(b² − 4ac)) / 2a</div>
+                <div class="formula-box">x₁ + x₂ = −b/a</div>
+                <div class="formula-box">x₁x₂ = c/a</div>
+                <div class="formula-box">Δ = b² − 4ac</div>
+            </div>
+        </div>
+    </section>
 
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    Passport to Advanced Math <span>▼</span>
+    <!-- VIDEOS -->
+    <section id="videos" class="page-section">
+        <h1>Video Tutorials</h1>
+
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube-nocookie.com/embed/6lIB1EV5RgQ" allowfullscreen></iframe>
                 </div>
-                <div class="accordion-content">
-                    <div class="formula-box"><strong>Quadratic Formula:</strong> x = (-b ± √(b² - 4ac)) / 2a</div>
-                    <div class="formula-box"><strong>Vertex of Parabola:</strong> x = -b / 2a</div>
-                    <div class="formula-box"><strong>Exponential Growth:</strong> y = a(1 + r)^t</div>
+                <div class="video-info">
+                    <h3>SAT Math Walkthrough</h3>
+                    <p>Full strategy breakdown.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- VIDEOS PAGE -->
-        <section id="videos" class="page-section">
-            <h1>Video Tutorials</h1>
-            <p>Curated lessons to help you visualize difficult concepts.</p>
-            
-            <div class="video-grid">
-                <!-- Video 1 -->
-                <div class="video-card">
-                    <div class="video-placeholder">
-                        <span>▶ [YouTube Embed]</span>
-                    </div>
-                    <div class="video-info">
-                        <h3>Hardest SAT Problems Solved</h3>
-                        <p>Walkthrough of the final 5 questions on Module 2.</p>
-                    </div>
-                </div>
+    <!-- DESMOS -->
+    <section id="desmos" class="page-section">
+        <h1>Interactive Desmos</h1>
+        <div class="desmos-container">
+            <iframe src="https://www.desmos.com/calculator"></iframe>
+        </div>
+    </section>
 
-                <!-- Video 2 -->
-                <div class="video-card">
-                    <div class="video-placeholder">
-                        <span>▶ [YouTube Embed]</span>
-                    </div>
-                    <div class="video-info">
-                        <h3>Quadratic Equations Fast</h3>
-                        <p>How to solve quadratics without factoring.</p>
-                    </div>
-                </div>
+</main>
 
-                <!-- Video 3 -->
-                <div class="video-card">
-                    <div class="video-placeholder">
-                        <span>▶ [YouTube Embed]</span>
-                    </div>
-                    <div class="video-info">
-                        <h3>Circle Theorems</h3>
-                        <p>Everything you need to know about arc length and sectors.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<footer>
+    <p>SAT Math Hub. Built to help students succeed.</p>
+</footer>
 
-        <!-- DESMOS PAGE -->
-        <section id="desmos" class="page-section">
-            <h1>Desmos Calculator Mastery</h1>
-            <p>The built-in calculator is your best friend. Practice using it below.</p>
-            
-            <div style="margin-bottom: 2rem;">
-                <h2>Top Desmos Tips:</h2>
-                <ul>
-                    <li><strong>Systems of Equations:</strong> Type both equations in. Click the intersection point to find the answer immediately.</li>
-                    <li><strong>Regressions:</strong> If given a table of points, type them into a table (x1, y1) and type <code>y1 ~ mx1 + b</code> to find the line of best fit.</li>
-                </ul>
-            </div>
+<!-- JS -->
+<script>
+function router(pageId) {
+    document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+    document.getElementById('navLinks').classList.remove('active');
+    window.scrollTo(0, 0);
+}
 
-            <div class="desmos-container">
-                <iframe src="https://www.desmos.com/calculator?embed" width="100%" height="100%" style="border:0" allowfullscreen></iframe>
-            </div>
-        </section>
+function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+}
 
-        <!-- PRACTICE PAGE -->
-        <section id="practice" class="page-section">
-            <h1>Practice Questions</h1>
-            
-            <!-- Question 1 -->
-            <div class="question-card">
-                <h3>Question 1: Linear Equations</h3>
-                <p>If 3x + 12 = 24, what is the value of x + 4?</p>
-                <ul class="options-list">
-                    <li>A) 4</li>
-                    <li>B) 8</li>
-                    <li>C) 12</li>
-                    <li>D) 16</li>
-                </ul>
-                <button class="btn-reveal" onclick="toggleAnswer('ans1')">Show Answer</button>
-                <div id="ans1" class="answer-box">
-                    <strong>Correct Answer: B (8)</strong><br>
-                    Explanation: First solve for x. 3x = 12, so x = 4. The question asks for x + 4, so 4 + 4 = 8.
-                </div>
-            </div>
+function toggleAccordion(header) {
+    const content = header.nextElementSibling;
+    content.classList.toggle('open');
+    header.querySelector('span').textContent =
+        content.classList.contains('open') ? '▲' : '▼';
+}
+</script>
 
-            <!-- Question 2 -->
-            <div class="question-card">
-                <h3>Question 2: Percentages</h3>
-                <p>A laptop is discounted by 20%. If the sale price is $800, what was the original price?</p>
-                <button class="btn-reveal" onclick="toggleAnswer('ans2')">Show Answer</button>
-                <div id="ans2" class="answer-box">
-                    <strong>Correct Answer: $1000</strong><br>
-                    Explanation: If discounted by 20%, the sale price is 80% of the original. <br>
-                    0.80 * x = 800 <br>
-                    x = 800 / 0.80 = 1000.
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT PAGE -->
-        <section id="contact" class="page-section">
-            <h1>Contact Us</h1>
-            <p>Have a question about a problem or need tutoring? Send a message.</p>
-            
-            <div class="contact-form">
-                <form onsubmit="event.preventDefault(); alert('Message sent (Demo only)!');">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="cta-button">Send Message</button>
-                </form>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2025 SAT Math Hub. Built for students.</p>
-    </footer>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
